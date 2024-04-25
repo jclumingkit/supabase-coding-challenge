@@ -1,11 +1,11 @@
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import React from "react";
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { Layout } from "../components/Layout";
 import { theme } from "../theme";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Supabase Coding Challenge",
+  description: "A customized coding challenge for Supabase.",
 };
 
 export default function RootLayout({ children }: { children: any }) {
@@ -20,7 +20,9 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <Layout>{children}</Layout>
+        </MantineProvider>
       </body>
     </html>
   );
